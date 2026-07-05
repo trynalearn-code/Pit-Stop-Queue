@@ -19,3 +19,12 @@ export function getCurrentLap(){
     })
 }
 
+export function getTotalLaps(){
+    readFile("raceData.json", "utf8", (err, data)=>{
+        if (err){
+            return ("Error: ", err)
+        }
+        const datas = JSON.parse(data)
+        console.log(datas.totalLaps)
+    })
+}
