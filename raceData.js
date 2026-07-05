@@ -64,5 +64,17 @@ export function carsWaitingForPitStop(){
 }
 
 export function nextCarToEnter(){
-    
+    console.log(carsWaitingForPitStop[0])
+}
+
+
+export function searchCarById(id){
+    readFile("raceData.json", "utf8", (err, data)=>{
+        if (err){
+            return ("Error: No car found with number #99 in the current race.", err)
+        }
+        const datas = JSON.parse(data)
+        const id = datas.find(cars=>cars.id === id)
+        console.log(id)
+    })
 }
