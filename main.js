@@ -1,6 +1,6 @@
 
 
-import { getRaceName } from "./raceData.js"
+import { getCurrentLap, getRaceName } from "./raceData.js"
 
 function showPitStopQueqe(){
     console.log(`Pit Stop Queue - Race Team Management System
@@ -12,8 +12,9 @@ Loading queue data...
 Race:`), 
 getRaceName();
 setTimeout(() => {
-  console.log("Lap:")  
+  console.log("Lap:"), getCurrentLap() 
 }, 1000);
+
 }
 
 showPitStopQueqe();
