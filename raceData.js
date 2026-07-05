@@ -59,6 +59,10 @@ export function carsWaitingForPitStop(){
         const datas = JSON.parse(data)
         const cars = datas.cars
         const waiting = cars.filter(cars=>cars.status==="waiting")
-        console.log(datas.totalLaps)
+        console.log(waiting)
     })
+}
+
+export function nextCarToEnter(){
+    
 }
